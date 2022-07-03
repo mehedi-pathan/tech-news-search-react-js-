@@ -1,38 +1,151 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400&family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #d0dfff;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 20px 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  margin: 20px 0;
+  color: rgba(21, 19, 60, 1);
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+span {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.stories_div {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  min-width: 200px;
+  width: 40vw;
+  padding: 40px;
+  background-color: #c2d4fb;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+  color: #15133c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-button {
+  flex-direction: row;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-button a {
+  text-decoration: none;
+  color: #2f69e7;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.card-button a:last-child {
+  color: #ff0000;
+}
+
+form {
+  display: grid;
+  place-items: center;
+}
+.search_box {
+  position: relative;
+}
+
+.search_box span {
+  position: absolute;
+  top: 9px;
+  right: 12px;
+  font-size: 26px;
+}
+
+input {
+  padding: 10px 15px;
+  min-width: 400px;
+  font-size: 18px;
+  text-transform: capitalize;
+  border: 1px rgba(20, 10, 20, 0.1);
+  border-radius: 15px;
+  outline: none;
+  box-shadow: 2px 1px rgba(255, 255, 255, 0.68);
+}
+
+.pagination_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 100px;
+  height: 45px;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  padding: 8px 20px;
+  margin: 30px;
+  color: #000;
+  background-color: #6893ee;
+  border: none;
+  border-radius: 35px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+/* responsive layout  */
+
+@media (max-width: 998px) {
+  html {
+    font-size: 56%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card {
+    min-width: 450px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 51%;
+  }
+
+  .card {
+    min-width: 350px;
+    padding: 20px;
   }
 }
